@@ -50,7 +50,7 @@ const authOptions: NextAuthConfig = {
       return token;
     },
   },
-  secret: process.env.NEXTAUTH_SECRET,
+  secret: process.env.AUTH_SECRET ?? process.env.NEXTAUTH_SECRET,
 };
 
 export default authOptions;
